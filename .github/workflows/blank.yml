@@ -4,7 +4,7 @@ jobs:
   build:
    runs-on: ubuntu-latest
    steps:
-    - name:
+    - name: Build Step
       run: echo "Building demo app"
       
        
