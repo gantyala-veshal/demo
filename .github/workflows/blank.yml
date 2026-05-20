@@ -4,7 +4,7 @@ jobs:
   build:
    runs-on: ubuntu-latest
    steps:
-    - run: echo "Building demo app
+    - run: echo "Building demo app"
       
   test:
    needs: build
