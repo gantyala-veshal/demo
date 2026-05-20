@@ -5,4 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello step
-        run: echo "Welcome to GitHub Actions"
+#Running Multiple Shell Commands in single step
+        run: |
+         echo "This is first line"
+         echo "This is second line"
+        
