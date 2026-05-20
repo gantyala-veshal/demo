@@ -4,17 +4,17 @@ jobs:
   build:
    runs-on: ubuntu-latest
    steps:
-    - name: Build Phase
-      run: echo "Building demo app"
+    - run: echo "Building demo app
       
   test:
+   needs: build
    runs-on: ubuntu-latest
    steps:
-    - name: Test Phase
-      run: echo "Testing demo app"
+    - run: echo "Testing demo app"
       
   deploy:
+   needs: test
    runs-on: ubuntu-latest
    steps:
-     - name: Deployment Phase
-       run: echo "Deploying the demo app"
+     - run: echo "Deploying the demo app"
+       
