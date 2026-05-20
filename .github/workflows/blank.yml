@@ -1,12 +1,20 @@
 name: HelloWorld Workflow
 on: workflow_dispatch
-jobs: 
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello step
-#Running Multiple Shell Commands in single step
-        run: |
-         echo "This is first line"
-         echo "This is second line"
-        
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Build Phase
+      run: echo "Building demo app"
+      
+  test:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Test Phase
+      run: echo "Testing demo app"
+      
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Deployment Phase
+       run: echo "Deploying the demo app"
